@@ -65,6 +65,10 @@
   run_once: true
   become: true
 
+- name: Show io_properties fact
+  debug:
+    var: io_properties
+
 - name: Set io.conf
   lineinfile:
     path: /etc/scylla.d/io.conf
